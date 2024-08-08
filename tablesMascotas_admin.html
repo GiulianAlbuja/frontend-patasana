@@ -186,53 +186,49 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <!-- Existing content... -->
+<!-- Botón para abrir el modal de registro de mascota -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#registrarMascotaModal">
+    Registrar nueva mascota
+</button>
 
-    <!-- Button to Open the Modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registrarMascotaModal">
-        Registrar Nueva Mascota
-    </button>
-
-    <!-- The Modal -->
-    <div class="modal fade" id="registrarMascotaModal" tabindex="-1" role="dialog" aria-labelledby="registrarMascotaModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="registrarMascotaModalLabel">Registrar Nueva Mascota</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="formRegistrarMascota">
-                        <div class="form-group">
-                            <label for="email">Email del Dueño</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="raza">Raza</label>
-                            <input type="text" class="form-control" id="raza" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="especie">Especie</label>
-                            <input type="text" class="form-control" id="especie" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="edad">Edad</label>
-                            <input type="number" class="form-control" id="edad" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="observaciones">Observaciones</label>
-                            <input type="text" class="form-control" id="observaciones" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Registrar</button>
-                    </form>
-                </div>
+<!-- Modal para registrar una nueva mascota -->
+<div class="modal fade" id="registrarMascotaModal" tabindex="-1" role="dialog" aria-labelledby="registrarMascotaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registrarMascotaModalLabel">Registrar nueva mascota</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registrarMascotaForm">
+                    <div class="form-group">
+                        <label for="emailDueño">Correo electrónico del dueño</label>
+                        <input type="email" class="form-control" id="emailDueño" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombreMascota">Nombre de la mascota</label>
+                        <input type="text" class="form-control" id="nombreMascota" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="razaMascota">Raza</label>
+                        <input type="text" class="form-control" id="razaMascota" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="especieMascota">Especie</label>
+                        <input type="text" class="form-control" id="especieMascota" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edadMascota">Edad</label>
+                        <input type="number" class="form-control" id="edadMascota" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacionesMascota">Observaciones</label>
+                        <textarea class="form-control" id="observacionesMascota" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrar mascota</button>
+                </form>
             </div>
         </div>
     </div>

@@ -72,6 +72,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Manejar el registro de una nueva mascota
+    document.getElementById('registrarMascotaForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const token = localStorage.getItem('token');
+        const email = document.getElementById('emailDueño').value;
+        const nombre = document.getElementById('nombreMascota').value;
+        const raza = document.getElementById('razaMascota').value;
+        const especie = document.getElementById('especieMascota').value;
+        const edad = document.getElementById('edadMascota').value;
+        const observaciones = document.getElementById('observacionesMascota').value;
+
+        fetch('http://52.15.107.129:8082/mascotas/registrar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify({ email, nombre, raza, especie, edad, observaciones, token }),
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error('Error al registrar la mascota');
+            }
+        })
+        .then(data => {
+            alert('Mascota registrada exitosamente');
+            $('#registrarMascotaModal').modal('hide');
+            document.getElementById('registrarMascotaForm').reset();
+
+            // Opcional: Volver a cargar la lista de mascotas para reflejar los cambios
+            fetch('http://52.15.107.129:8082/mascotas/listar', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                llenarTablaMascotas(data.mascotas);
+            })
+            .catch(error => {
+                console.error('Error obteniendo la lista de mascotas:', error);
+            });
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Hubo un error al registrar la mascota');
+        });
+    });
+
     // Función para manejar el cierre de sesión
     document.getElementById('logoutButton').addEventListener('click', function() {
         localStorage.removeItem('token');
