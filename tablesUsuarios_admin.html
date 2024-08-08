@@ -41,6 +41,7 @@
                 <div class="sidebar-brand-text mx-3">PATASANA</div>
             </a>
 
+
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
                 <a class="nav-link" href="tablesUsuarios_admin.html">
@@ -66,6 +67,9 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Visitas</span></a>
             </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -140,37 +144,39 @@
                     <p class="mb-4">Este es tu espacio virtual dentro de la veteriana PATASANA, 
                         aquí puedes ver todos los usuarios que han pasado por tu veterinaria.</p>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Lista de Mascotas</h6>
-                        </div>
-                        <div class="card-body">
+                    
                             
-                            <!-- Tabla para mostrar mascotas -->
-                            <div class="table-responsive mt-4">
-                                <table class="table table-bordered" id="tablaUsuarios" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <!-- Aquí se llenarán las mascotas dinámicamente -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <!-- DataTales Example -->
+                     <!-- Reemplaza la tabla actual en tables.html con la siguiente -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Usuarios</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="tablaUsuarios" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <!-- Aquí se llenarán las mascotas dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -205,12 +211,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">¿Quieres salir?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Presiona "Logout" para cerra tu sesión.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <button class="btn btn-primary" id="logoutButton" type="button">Logout</button>
@@ -218,8 +224,6 @@
             </div>
         </div>
     </div>
-
-    
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

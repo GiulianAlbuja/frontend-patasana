@@ -41,31 +41,19 @@
                 <div class="sidebar-brand-text mx-3">PATASANA</div>
             </a>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item active">
-                <a class="nav-link" href="tablesUsuarios_admin.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Usuarios</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
              <!-- Nav Item - Tables -->
              <li class="nav-item active">
-                <a class="nav-link" href="tablesMascotas_admin.html">
+                <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Mascotas</span></a>
             </li>
 
             <hr class="sidebar-divider d-none d-md-block">
 
-             <!-- Nav Item - Tables -->
-             <li class="nav-item active">
-                <a class="nav-link" href="tablesVisitas_admin.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Visitas</span></a>
-            </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -138,39 +126,47 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">¡Bienvenido!</h1>
                     <p class="mb-4">Este es tu espacio virtual dentro de la veteriana PATASANA, 
-                        aquí puedes ver todos los usuarios que han pasado por tu veterinaria.</p>
+                        aquí puedes ver todas tus mascotitas que han pasado por nuestra veterinaria.</p>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Lista de Mascotas</h6>
-                        </div>
-                        <div class="card-body">
+                    
                             
-                            <!-- Tabla para mostrar mascotas -->
-                            <div class="table-responsive mt-4">
-                                <table class="table table-bordered" id="tablaUsuarios" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nombre</th>
-                                            <th>Correo</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <!-- Aquí se llenarán las mascotas dinámicamente -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    
+                    <!-- DataTales Example -->
+                     <!-- Reemplaza la tabla actual en tables.html con la siguiente -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Lista de Mascotas</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="tablaMascotas" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Raza</th>
+                        <th>Especie</th>
+                        <th>Edad</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Raza</th>
+                        <th>Especie</th>
+                        <th>Edad</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <!-- Aquí se llenarán las mascotas dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -205,12 +201,12 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">¿Quieres salir?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Presiona "Logout" para cerra tu sesión.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                     <button class="btn btn-primary" id="logoutButton" type="button">Logout</button>
@@ -218,8 +214,6 @@
             </div>
         </div>
     </div>
-
-    
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -230,7 +224,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-    <script src="js/dashboard_admin.js"></script>
+    <script src="js/dashboard_usuario.js"></script>
 
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>

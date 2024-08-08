@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error obteniendo información del usuario:', error);
-            window.location.href = 'login.html';
+            //window.location.href = 'login.html';
         });
 
         // Obtener la lista de mascotas
